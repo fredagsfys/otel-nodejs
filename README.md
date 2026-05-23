@@ -98,15 +98,15 @@ eBPF.)
 
 Configure through the standard `OTEL_*` environment variables:
 
-| Environment variable           | Purpose                                                       | Default                                      |
-| ------------------------------ | ------------------------------------------------------------- | -------------------------------------------- |
-| `OTEL_EXPORTER_OTLP_ENDPOINT`  | Collector / backend address                                   | `http://localhost:4318`                      |
-| `OTEL_EXPORTER_OTLP_PROTOCOL`  | `http/protobuf` (this template) or `grpc`                     | `http/protobuf`                              |
-| `OTEL_EXPORTER_OTLP_HEADERS`   | Auth headers for hosted backends                              | _(none)_                                     |
+| Environment variable           | Purpose                                                       | Default                                            |
+| ------------------------------ | ------------------------------------------------------------- | -------------------------------------------------- |
+| `OTEL_EXPORTER_OTLP_ENDPOINT`  | Collector / backend address                                   | `http://localhost:4318`                            |
+| `OTEL_EXPORTER_OTLP_PROTOCOL`  | `http/protobuf` (this template) or `grpc`                     | `http/protobuf`                                    |
+| `OTEL_EXPORTER_OTLP_HEADERS`   | Auth headers for hosted backends                              | _(none)_                                           |
 | `OTEL_SERVICE_NAME`            | Service name                                                  | `greeter-service-nodejs` (set in the start script) |
-| `OTEL_TRACES_SAMPLER` / `_ARG` | Sampling strategy / ratio                                     | `parentbased_always_on`                      |
-| `OTEL_METRIC_EXPORT_INTERVAL`  | Metric export interval (ms)                                   | `60000`                                      |
-| `OTEL_RESOURCE_ATTRIBUTES`     | Extra resource attributes, e.g. `deployment.environment=prod` | _(none)_                                     |
+| `OTEL_TRACES_SAMPLER` / `_ARG` | Sampling strategy / ratio                                     | `parentbased_always_on`                            |
+| `OTEL_METRIC_EXPORT_INTERVAL`  | Metric export interval (ms)                                   | `60000`                                            |
+| `OTEL_RESOURCE_ATTRIBUTES`     | Extra resource attributes, e.g. `deployment.environment=prod` | _(none)_                                           |
 
 ### Switching backends
 
