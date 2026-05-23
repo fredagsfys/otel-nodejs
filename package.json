@@ -10,8 +10,8 @@
   "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
-    "start": "OTEL_SERVICE_NAME=greeting-service OTEL_SEMCONV_STABILITY_OPT_IN=http node --require @opentelemetry/auto-instrumentations-node/register dist/server.js",
-    "dev": "OTEL_SERVICE_NAME=greeting-service OTEL_SEMCONV_STABILITY_OPT_IN=http NODE_OPTIONS=\"--require @opentelemetry/auto-instrumentations-node/register\" tsx watch src/server.ts",
+    "start": "OTEL_SERVICE_NAME=greeter-service-nodejs OTEL_SEMCONV_STABILITY_OPT_IN=http node --require @opentelemetry/auto-instrumentations-node/register dist/server.js",
+    "dev": "OTEL_SERVICE_NAME=greeter-service-nodejs OTEL_SEMCONV_STABILITY_OPT_IN=http NODE_OPTIONS=\"--require @opentelemetry/auto-instrumentations-node/register\" tsx watch src/server.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "lint": "eslint .",
