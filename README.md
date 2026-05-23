@@ -52,9 +52,9 @@ stable HTTP semantic conventions). For faster local metric feedback, prefix with
 
 Open Grafana at <http://localhost:3000> (login `admin` / `admin`) → **Explore**:
 
-- **Traces** — datasource `Tempo`, run TraceQL `{ resource.service.name = "greeting-service" }`
+- **Traces** — datasource `Tempo`, run TraceQL `{ resource.service.name = "greeter-service-nodejs" }`
 - **Metrics** — datasource `Prometheus`, search for `http_server_request_duration_seconds_count`
-- **Logs** — datasource `Loki`, query `{service_name="greeting-service"}`
+- **Logs** — datasource `Loki`, query `{service_name="greeter-service-nodejs"}`
 
 To watch what the collector receives:
 
@@ -103,7 +103,7 @@ Configure through the standard `OTEL_*` environment variables:
 | `OTEL_EXPORTER_OTLP_ENDPOINT`  | Collector / backend address                                   | `http://localhost:4318`                      |
 | `OTEL_EXPORTER_OTLP_PROTOCOL`  | `http/protobuf` (this template) or `grpc`                     | `http/protobuf`                              |
 | `OTEL_EXPORTER_OTLP_HEADERS`   | Auth headers for hosted backends                              | _(none)_                                     |
-| `OTEL_SERVICE_NAME`            | Service name                                                  | `greeting-service` (set in the start script) |
+| `OTEL_SERVICE_NAME`            | Service name                                                  | `greeter-service-nodejs` (set in the start script) |
 | `OTEL_TRACES_SAMPLER` / `_ARG` | Sampling strategy / ratio                                     | `parentbased_always_on`                      |
 | `OTEL_METRIC_EXPORT_INTERVAL`  | Metric export interval (ms)                                   | `60000`                                      |
 | `OTEL_RESOURCE_ATTRIBUTES`     | Extra resource attributes, e.g. `deployment.environment=prod` | _(none)_                                     |

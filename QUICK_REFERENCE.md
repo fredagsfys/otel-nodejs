@@ -56,7 +56,7 @@ await trace.getTracer('my-service').startActiveSpan('doWork', async (span) => {
 OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318   # collector / backend (default)
 OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf           # or grpc
 OTEL_EXPORTER_OTLP_HEADERS=api-key=YOUR_KEY         # hosted backend auth
-OTEL_SERVICE_NAME=greeting-service
+OTEL_SERVICE_NAME=greeter-service-nodejs
 OTEL_TRACES_SAMPLER=parentbased_traceidratio
 OTEL_TRACES_SAMPLER_ARG=0.1                          # sample 10% of traces
 OTEL_METRIC_EXPORT_INTERVAL=5000                     # faster local feedback (ms)
