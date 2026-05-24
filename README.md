@@ -111,9 +111,9 @@ Configure through the standard `OTEL_*` environment variables:
 ### Switching backends
 
 ```bash
-# Honeycomb (OTLP/HTTP)
-export OTEL_EXPORTER_OTLP_ENDPOINT=https://api.honeycomb.io
-export OTEL_EXPORTER_OTLP_HEADERS=x-honeycomb-team=YOUR_KEY
+# Point at any hosted OTLP/HTTP backend; pass its auth header(s)
+export OTEL_EXPORTER_OTLP_ENDPOINT=https://otlp.example-backend.com
+export OTEL_EXPORTER_OTLP_HEADERS=api-key=YOUR_KEY
 ```
 
 ## Scripts
