@@ -1,7 +1,7 @@
 import express from 'express';
 import { createLogger, format, transports } from 'winston';
 
-// SLF4J-style logger. With the winston auto-instrumentation active, these logs are
+// Structured JSON logger. With the winston auto-instrumentation active, these logs are
 // correlated with the request span and exported via OTLP.
 export const logger = createLogger({
   level: 'info',
